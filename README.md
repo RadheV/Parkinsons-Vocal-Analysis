@@ -17,9 +17,11 @@ This project attempts to prove that vocalization data from a patient can help di
 
 The study first focuses on the linear correlations between 22 voice parameters of fundamental frequency variability, amplitude variations, and nonlinear measures. Then these highly correlated vocal parameters are combined by using the linear discriminant analysis method which I have carried forward in analysising in my code as well.
 
+
 ### Exploratory Visualization
 ---
 To get a better grasp of the data, I developed a scatter matrix that allows me to see the relationship between the features presented from the data set. There are multiple correlations seen in the matrix, but I specifically analyzed the distribution of a feature when compared to the status of the patient. I noticed that across all features, those diagnosed with Parkinson’s had a larger spread of data than those who did not. While healthy patients had their data clustered near 0, the Parkinson patients had the features run across the entire axis. This results in a separation between the status of 1 and 0 in the spread1, spread 2, D2, and PPE columns. This division will allow for greater success by SVM classification, which can better separate the data with the hyper plane.
+
 
 ### Algorithms and Techniques
 ---
@@ -33,17 +35,21 @@ Stochastic Gradient Descent: A classifier that applies the concept of gradient d
 
 Gradient Tree Boosting: An ensemble classifier (combines predictions of base estimators) that makes use of multiple decision trees - giving their contributions weights – to classify data. The weights are developed using the gradient descent algorithm. I decided to implement the GTB because of its strength in handling heterogeneous features and high accuracy. The problem I do expect with this classifier is that it scales poorly and so with larger sets of data, this would not be optimal. It is still interesting to see the results of this classifier however.
 
+
 ### Benchmark
 ---
 The benchmark for this project is the resulting prediction rate from the original study. I expect to obtain a predictability rating that is at least 5% within the margin of the 91.4% they obtained in their analysis to be successful.
+
 
 ### Data Preprocessing
 ---
 There was no need to implement feature transformation, as all of the data is continuous. The data itself does not project any outliers that I feel would have an enormous impact on the classifiers I have created. Thus no effort has been made to seek out and eliminate data points.
 
+
 ### Implementation
 ---
 The supervised learning algorithms ran smoothly with the given data set. I encountered no issues with the metrics and techniques I applied. Some effort was made to tinker with the scatter matrix I produced so that the labels were clearly visible. I should report that I have created multiple functions to help in the training and prediction from my classifiers. This makes it relatively easy to do so for multiple classifiers as I am.
+
 
 ### Refinement 
 ---
@@ -83,3 +89,11 @@ The model itself can be further tuned to try and improve the prediction rate. I 
 ---
 
 The proposed diagnosis method could be valuble as an additional method to reconfirm the diagnosis of Parkinson’s disease and perhaps mainfested into other variations of testing of speech and language deficiencies.
+
+
+### References
+---
+
+[1]. Sewall G. K., Jiang J., Ford C. N. Clinical evaluation of Parkinson's-related dysphonia. Laryngoscope. 2006;116(10):1740–1744. doi: 10.1097/01.mlg.0000232537.58310.22. [PubMed] [CrossRef] [Google Scholar]
+
+[2]. Bhuta T., Patrick L., Garnett J. D. Perceptual evaluation of voice quality and its correlation with acoustic measurements. Journal of Voice. 2004;18(3):299–304. doi: 10.1016/j.jvoice.2003.12.004. [PubMed] [CrossRef] [Google Scholar]
