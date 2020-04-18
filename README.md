@@ -22,6 +22,7 @@ The study first focuses on the linear correlations between 22 voice parameters o
 ---
 To get a better grasp of the data, I developed a scatter matrix that allows me to see the relationship between the features presented from the data set. There are multiple correlations seen in the matrix, but I specifically analyzed the distribution of a feature when compared to the status of the patient. I noticed that across all features, those diagnosed with Parkinson’s had a larger spread of data than those who did not. While healthy patients had their data clustered near 0, the Parkinson patients had the features run across the entire axis. This results in a separation between the status of 1 and 0 in the spread1, spread 2, D2, and PPE columns. This division will allow for greater success by SVM classification, which can better separate the data with the hyper plane.
 
+![Scatter](https://github.com/RadheV/Parkinsons-Vocal-Analysis/blob/master/scatter.png)
 
 ### Algorithms and Techniques
 ---
@@ -61,7 +62,6 @@ I successfully produce F1 scores based off the predictions made by my classifier
 | 100 |    0.7833   |    0.8820   |    0.5047   |    1.0000   |
 | 150 |    0.7568   |    0.8933   |      0      |    1.0000   |
 
-![Scatter](https://github.com/RadheV/Parkinsons-Vocal-Analysis/blob/master/scatter.png)
 
 Graphing the the F1 scores of the four classifiers I have tested, I've eliminated Gradient Boosting as the score is perfect consistently for all there sets of data showing that it overfits extremely well on the training data and thus low variabiltity in its aspect. The classifier will underperform completely on an unseen test data and therefore deemed as unsuitable.
 
